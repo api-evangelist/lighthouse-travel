@@ -1,0 +1,154 @@
+aid: lighthouse-travel
+name: Lighthouse
+description: >-
+  Lighthouse (formerly OTA Insight) is the commercial platform for the
+  travel and hospitality industry, transforming data complexity into revenue
+  growth for 80,000+ hotels across 185+ countries. Headquartered in London
+  with offices across Europe, the Americas, and Asia-Pacific, Lighthouse
+  combines market intelligence, business intelligence, and revenue
+  management into a single SaaS suite. Core products include Rate Insight
+  and Market Insight for competitive pricing and forward demand, Pricing
+  Manager for automated revenue optimization, Benchmark Insight for
+  Smart Compset competitive analysis, Business Intelligence for portfolio
+  reporting, Parity Insight for distribution parity, Channel Manager for
+  independent hotels, and newer AI products like KITT (AI receptionist)
+  and Connect AI (ChatGPT direct-booking app). The platform processes 1.7
+  billion hotel rates per day across 300,000+ profiled competitor hotels.
+  Lighthouse exposes a public, subscription-gated Integration API
+  (api.mylighthouse.com, v3.1) for hotel customers and certified
+  technology partners — covering Hotels, Markets, Rates, Demand, Ranking,
+  Reviews, Parity, and Market Insight — and runs a partner program with
+  20+ named integrations including Mews, Infor, Duetto, Cendyn, Ideas,
+  Atomize, SHR Group, and Cloudbeds. Revenue model is subscription SaaS
+  sold by sales engagement; pricing is not published publicly.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Hospitality
+  - Hotels
+  - Travel
+  - Revenue Management
+  - Market Intelligence
+  - Business Intelligence
+  - Pricing
+  - Rate Shopping
+  - Competitive Intelligence
+  - Distribution
+  - Parity
+  - Channel Manager
+  - Demand Forecasting
+  - SaaS
+  - AI
+url: https://raw.githubusercontent.com/api-evangelist/lighthouse-travel/refs/heads/main/apis.yml
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: lighthouse-travel:integration-api
+    name: Lighthouse Integration API
+    description: >-
+      The Lighthouse Integration API (v3.1, previously the OTA Insight API)
+      enables subscribed hotels and certified technology partners to create
+      periodic custom data extracts from Lighthouse's hotel competitive
+      intelligence dataset. Endpoints cover Hotels, Markets, Rates (current
+      and historic, by hotel and by room type), Demand predictions, Ranking
+      positions and summaries, Review summaries, Parity comparisons, Parity
+      Insight market scoring, and Market Insight demand and search-volume
+      forecasts (next 351 days). Authentication uses an account-bound API
+      token passed as the X-Oi-Authorization header. Rate limits are 20
+      requests per API per subscription per 24 hours and 120 requests per
+      minute globally. Both JSON (default) and CSV output formats are
+      supported, with optional gzip encoding. Access requires an active
+      Lighthouse subscription; advanced endpoints (Live rateshopping, Raw
+      Rates) require additional entitlements.
+    baseURL: https://api.mylighthouse.com/v3
+    humanURL: https://api.mylighthouse.com/
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    tags:
+      - Hotels
+      - Rates
+      - Demand
+      - Ranking
+      - Reviews
+      - Parity
+      - Market Insight
+      - Competitive Intelligence
+    properties:
+      - type: Documentation
+        url: https://api.mylighthouse.com/
+      - type: OpenAPI
+        url: openapi/lighthouse-travel-integration-api-openapi.yml
+      - type: DeveloperAnnouncement
+        url: https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+      - type: Partnerships
+        url: https://www.mylighthouse.com/company/partnerships
+      - type: Authentication
+        url: https://api.mylighthouse.com/
+      - type: RateLimits
+        url: https://api.mylighthouse.com/
+common:
+  - type: Website
+    url: https://www.mylighthouse.com
+  - type: About
+    url: https://www.mylighthouse.com/company/about
+  - type: Products
+    url: https://www.mylighthouse.com/products
+  - type: PricingManager
+    url: https://www.mylighthouse.com/products/pricing-manager
+  - type: RateInsight
+    url: https://www.mylighthouse.com/products/rate-insight
+  - type: MarketInsight
+    url: https://www.mylighthouse.com/products/market-insight
+  - type: BenchmarkInsight
+    url: https://www.mylighthouse.com/products/benchmark-insight
+  - type: BusinessIntelligence
+    url: https://www.mylighthouse.com/products/business-intelligence
+  - type: ParityInsight
+    url: https://www.mylighthouse.com/products/parity-insight
+  - type: ChannelManager
+    url: https://www.mylighthouse.com/products/channel-manager
+  - type: DataSolutions
+    url: https://www.mylighthouse.com/data-services/hotel-data-solutions
+  - type: DeveloperSolutions
+    url: https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+  - type: API
+    url: https://api.mylighthouse.com/
+  - type: Marketplace
+    url: https://marketplace.mylighthouse.com/
+  - type: Partnerships
+    url: https://www.mylighthouse.com/company/partnerships
+  - type: Customers
+    url: https://www.mylighthouse.com/customers
+  - type: Resources
+    url: https://www.mylighthouse.com/resources
+  - type: Blog
+    url: https://www.mylighthouse.com/resources/blog
+  - type: Insights
+    url: https://www.mylighthouse.com/resources/insights
+  - type: Events
+    url: https://www.mylighthouse.com/resources/events
+  - type: CustomerCare
+    url: https://www.mylighthouse.com/company/customer-care
+  - type: Trust
+    url: https://trust.mylighthouse.com
+  - type: Careers
+    url: https://www.mylighthouse.com/company/careers
+  - type: ContactSales
+    url: https://www.mylighthouse.com/contact-sales
+  - type: Login
+    url: https://app.mylighthouse.com/login
+  - type: GitHub
+    url: https://github.com/OTA-Insight
+  - type: DevTo
+    url: https://dev.to/lighthouse-intelligence
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/lighthouseintelligence/
+  - type: YouTube
+    url: https://www.youtube.com/@HotelRevenueManagement
+  - type: Facebook
+    url: https://www.facebook.com/lighthouse.intel/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
