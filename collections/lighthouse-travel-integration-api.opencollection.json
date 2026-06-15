@@ -1,0 +1,355 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lighthouse Integration API",
+    "version": "3.1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Oi-Authorization",
+      "value": "{{X-Oi-Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Hotels",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Hotels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/hotels"
+          },
+          "docs": "List hotels, their competitors, compsets, and subscribed features for the authenticated account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Markets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Markets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/markets"
+          },
+          "docs": "List markets and the subscriptions linked to them."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Rates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Lowest Rates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/rates",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ota",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "los",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lowest rates for a hotel and its compset on a given OTA."
+        },
+        {
+          "info": {
+            "name": "Get Lowest Rates Per Room Type",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/roomtyperates",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lowest rates broken down by room type for a hotel and compset."
+        },
+        {
+          "info": {
+            "name": "Get Historic Lowest Rates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/historic/rates",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "extractDate",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Historical lowest rates as captured on a specific extract date."
+        },
+        {
+          "info": {
+            "name": "Get Historic Lowest Rates Per Room Type",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/historic/roomtyperates",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "extractDate",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Historical room-type lowest rates as captured on a specific extract date."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Demand",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Market Demand Predictions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/demand",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Market demand predictions per arrival date for the linked subscription."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Ranking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Hotel Ranking Positions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/ranking",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Hotel ranking positions by OTA across the compset."
+        },
+        {
+          "info": {
+            "name": "Get Ranking Summaries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/rankingsummaries",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ota",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Average ranking positions over the past 12 months and 12 weeks per OTA."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Reviews",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Review Score Summaries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/reviews",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ota",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Aggregated review scores over the past 12 months and 12 weeks per OTA."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Parity",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Rate Parity Comparisons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/parities",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Rate parity comparisons across OTAs for the subscribed hotel."
+        },
+        {
+          "info": {
+            "name": "Get Parity Insight Scores",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/parityinsight",
+            "params": [
+              {
+                "name": "market_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Parity scores by aggregation and channel for a given market."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Market Insight",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Market Insight Demand",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/marketinsight",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Demand summaries for the next 351 days for the subscribed market."
+        },
+        {
+          "info": {
+            "name": "Get Market Insight Searches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/marketinsight/searches",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search volume data for the next 351 days for the subscribed market."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

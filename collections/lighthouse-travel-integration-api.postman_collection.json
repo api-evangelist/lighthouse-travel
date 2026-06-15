@@ -1,0 +1,1451 @@
+{
+  "item": [
+    {
+      "id": "cb910507-c399-4f1d-a293-13ee840c048e",
+      "name": "Hotels",
+      "description": {
+        "content": "List hotels, competitors, compsets, and subscribed features.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "54af7661-0a72-4bd5-b649-b464968285d5",
+          "name": "List Hotels",
+          "request": {
+            "name": "List Hotels",
+            "description": {
+              "content": "List hotels, their competitors, compsets, and subscribed features for the authenticated account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "hotels"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2f781213-0742-4815-9871-51a04ce208a2",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hotels"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3a480d49-9db4-43a1-8db5-fcf8ef91e18d",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hotels"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "997ade6c-f446-4b34-9da0-44752f8aa295",
+              "name": "Rate-limited",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hotels"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "a5836324-592f-49ab-ae91-62ccae3c1154",
+      "name": "Markets",
+      "description": {
+        "content": "List markets and linked subscriptions.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e7bd9d67-6b8f-4292-b0a2-d3ee6a97d8b5",
+          "name": "List Markets",
+          "request": {
+            "name": "List Markets",
+            "description": {
+              "content": "List markets and the subscriptions linked to them.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "markets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6e34b08c-2e6e-4914-bdd4-8b1697d07d08",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "markets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "df041d86-c6ad-48e3-9285-b93c60888258",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "markets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "011712c0-941e-435a-934e-57111af18286",
+              "name": "Rate-limited",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "markets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0e8626aa-27b4-440a-a873-a6e72f96009c",
+      "name": "Rates",
+      "description": {
+        "content": "Current and historic lowest rates, rates per room type, and raw rates across OTAs.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1e6f038a-ffed-44e5-83f6-6de781016387",
+          "name": "Get Lowest Rates",
+          "request": {
+            "name": "Get Lowest Rates",
+            "description": {
+              "content": "Lowest rates for a hotel and its compset on a given OTA.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "rates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "ota",
+                  "value": "bookingdotcom"
+                },
+                {
+                  "disabled": false,
+                  "key": "los",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ed4d91f5-dd9e-473d-a92e-af4a0e7b722a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ota",
+                      "value": "bookingdotcom"
+                    },
+                    {
+                      "key": "los",
+                      "value": "1"
+                    },
+                    {
+                      "key": "format",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "82f10682-70a6-4ce2-a9a6-90e4770dff0d",
+          "name": "Get Lowest Rates Per Room Type",
+          "request": {
+            "name": "Get Lowest Rates Per Room Type",
+            "description": {
+              "content": "Lowest rates broken down by room type for a hotel and compset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "roomtyperates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "edbc2c38-e3fe-4251-96f7-7796546f58be",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "roomtyperates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c635cfad-28ee-4d25-b413-ab077809f03d",
+          "name": "Get Historic Lowest Rates",
+          "request": {
+            "name": "Get Historic Lowest Rates",
+            "description": {
+              "content": "Historical lowest rates as captured on a specific extract date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "historic",
+                "rates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "extractDate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dd696e46-eba9-4d4a-975e-1716f4a8211e",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "historic",
+                    "rates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "extractDate",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4e6d2570-7c7a-4cfb-91a2-101d3d513df4",
+          "name": "Get Historic Lowest Rates Per Room Type",
+          "request": {
+            "name": "Get Historic Lowest Rates Per Room Type",
+            "description": {
+              "content": "Historical room-type lowest rates as captured on a specific extract date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "historic",
+                "roomtyperates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "extractDate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d1761389-908d-484c-ad86-3eb68f3aef49",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "historic",
+                    "roomtyperates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "extractDate",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "1af94ba5-8359-472e-abbb-74e98e4309c5",
+      "name": "Demand",
+      "description": {
+        "content": "Market demand predictions per arrival date.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b6677703-51cb-4740-b9cf-7fca386cec10",
+          "name": "Get Market Demand Predictions",
+          "request": {
+            "name": "Get Market Demand Predictions",
+            "description": {
+              "content": "Market demand predictions per arrival date for the linked subscription.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "demand"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3a39a4f5-adb9-42b7-bd98-e0a8587659d9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "demand"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "fe64d8bb-1e04-4b58-b0df-9baf9228fff9",
+      "name": "Ranking",
+      "description": {
+        "content": "Hotel ranking positions across OTAs and ranking summaries.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6a324bc4-c39e-4258-be55-7abd8b2d6453",
+          "name": "Get Hotel Ranking Positions",
+          "request": {
+            "name": "Get Hotel Ranking Positions",
+            "description": {
+              "content": "Hotel ranking positions by OTA across the compset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ranking"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3ac0c738-2f50-4c20-b640-5247ecf80b28",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ranking"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d3f9d6ff-c857-4f26-ac6a-b0c482819b70",
+          "name": "Get Ranking Summaries",
+          "request": {
+            "name": "Get Ranking Summaries",
+            "description": {
+              "content": "Average ranking positions over the past 12 months and 12 weeks per OTA.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "rankingsummaries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "ota",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bea3ecfb-ec8d-40c3-89aa-ea3089c75c9c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rankingsummaries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ota",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "4d6ddb6d-0f30-4729-b377-b0400fb6c99f",
+      "name": "Reviews",
+      "description": {
+        "content": "Aggregated review scores across OTAs.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f26d3b21-30b9-4e43-b8df-e9d8f38f289e",
+          "name": "Get Review Score Summaries",
+          "request": {
+            "name": "Get Review Score Summaries",
+            "description": {
+              "content": "Aggregated review scores over the past 12 months and 12 weeks per OTA.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "reviews"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "ota",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "00ce4e50-3004-4689-9f55-fafe29b322db",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reviews"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ota",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5f062d15-af8c-4f4f-aab6-3690b84537bc",
+      "name": "Parity",
+      "description": {
+        "content": "Rate parity comparisons across OTAs.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "392ef62e-0555-4ed8-a5d5-9faa856e018f",
+          "name": "Get Rate Parity Comparisons",
+          "request": {
+            "name": "Get Rate Parity Comparisons",
+            "description": {
+              "content": "Rate parity comparisons across OTAs for the subscribed hotel.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "parities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "87d948eb-8eb2-4c6a-84e9-704b070a734f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "parities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c0e79c45-16d5-4fec-8b71-c75edca9c521",
+          "name": "Get Parity Insight Scores",
+          "request": {
+            "name": "Get Parity Insight Scores",
+            "description": {
+              "content": "Parity scores by aggregation and channel for a given market.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "parityinsight"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "market_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4fe4749b-b4da-47c4-9d76-f863ac8896ad",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "parityinsight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "market_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "9a573d8f-b0e9-493b-8e46-87864f1d954a",
+      "name": "Market Insight",
+      "description": {
+        "content": "Forward-looking demand and search-volume insights.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a28dcb46-73ee-4977-bc34-9da2315678fb",
+          "name": "Get Market Insight Demand",
+          "request": {
+            "name": "Get Market Insight Demand",
+            "description": {
+              "content": "Demand summaries for the next 351 days for the subscribed market.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "marketinsight"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9af28a77-ec2b-46a2-929f-0a700c0dbf53",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "marketinsight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "54572c29-4a64-43a6-845e-cc01b0280281",
+          "name": "Get Market Insight Searches",
+          "request": {
+            "name": "Get Market Insight Searches",
+            "description": {
+              "content": "Search volume data for the next 351 days for the subscribed market.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "marketinsight",
+                "searches"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cc8c6211-20af-4ca1-ba8b-4332a4a0ffa9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "marketinsight",
+                    "searches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.mylighthouse.com/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Oi-Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "dda2903e-a535-4e56-992a-7749adda6f05",
+    "name": "Lighthouse Integration API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lighthouse Integration API (formerly the OTA Insight API) lets subscribed hotel and hospitality customers create periodic custom data extracts from Lighthouse's hotel competitive intelligence, market demand, pricing, and parity datasets. The API exposes read-only endpoints across Hotels, Markets, Rates, Demand, Ranking, Reviews, Parity, and Market Insight. It is part of the Lighthouse Developer Solutions Suite, which also includes integration patterns for Business Intelligence, Benchmark Insight, Pricing Manager, and Channel Manager.\n\nContact Support:\n Name: Lighthouse Developer Support",
+      "type": "text/plain"
+    }
+  }
+}
