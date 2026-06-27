@@ -3,19 +3,15 @@
   "feeds": [
     {
       "source": "https://www.mylighthouse.com/resources/blog",
-      "feed_url": "https://www.mylighthouse.com/resources/blog",
-      "title": "",
       "saved": 0,
-      "method": "none"
+      "error": "empty body (JS-rendered, no scrapeable HTML)"
     },
     {
       "source": "https://www.mylighthouse.com/resources",
-      "feed_url": "https://www.mylighthouse.com/resources",
-      "title": "",
       "saved": 0,
-      "method": "none"
+      "error": "empty body (JS-rendered, no scrapeable HTML)"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:51:54Z"
 }
