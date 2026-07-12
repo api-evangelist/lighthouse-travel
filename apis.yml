@@ -89,6 +89,12 @@ apis:
       - type: RateLimits
         url: https://api.mylighthouse.com/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/lighthouse-travel-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/lighthouse-travel-domain-security.yml
+  - type: Authentication
+    url: authentication/lighthouse-travel-authentication.yml
   - type: Website
     url: https://www.mylighthouse.com
   - type: About

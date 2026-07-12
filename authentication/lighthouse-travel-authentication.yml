@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/lighthouse-travel-integration-api-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: LighthouseApiToken
+  type: apiKey
+  in: header
+  parameter: X-Oi-Authorization
+  description: Account-bound API token passed as the X-Oi-Authorization header. Tokens provide
+    access to all subscriptions within the account.
+  sources:
+  - openapi/lighthouse-travel-integration-api-openapi.yml
