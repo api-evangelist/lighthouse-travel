@@ -89,6 +89,8 @@ apis:
       - type: RateLimits
         url: https://api.mylighthouse.com/
 common:
+  - type: AgenticAccess
+    url: agentic-access/lighthouse-travel-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/lighthouse-travel-vulnerability-disclosure.yml
   - type: DomainSecurity
