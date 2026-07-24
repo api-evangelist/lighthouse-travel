@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  title: Lighthouse Integration Demand Parity API
+  description: The Lighthouse Integration API (formerly the OTA Insight API) lets subscribed hotel and hospitality customers create periodic custom data extracts from Lighthouse's hotel competitive intelligence, market demand, pricing, and parity datasets. The API exposes read-only endpoints across Hotels, Markets, Rates, Demand, Ranking, Reviews, Parity, and Market Insight. It is part of the Lighthouse Developer Solutions Suite, which also includes integration patterns for Business Intelligence, Benchmark Insight, Pricing Manager, and Channel Manager.
+  version: '3.1'
+  contact:
+    name: Lighthouse Developer Support
+    url: https://www.mylighthouse.com/contact-sales
+  termsOfService: https://www.mylighthouse.com/legal/terms-conditions
+servers:
+- url: https://api.mylighthouse.com/v3
+  description: Production
+security:
+- LighthouseApiToken: []
+tags:
+- name: Parity
+  description: Rate parity comparisons across OTAs.
+paths:
+  /parities:
+    get:
+      tags:
+      - Parity
+      summary: Get Rate Parity Comparisons
+      description: Rate parity comparisons across OTAs for the subscribed hotel.
+      parameters:
+      - in: query
+        name: subscriptionId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+  /parityinsight:
+    get:
+      tags:
+      - Parity
+      summary: Get Parity Insight Scores
+      description: Parity scores by aggregation and channel for a given market.
+      parameters:
+      - in: query
+        name: market_id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    LighthouseApiToken:
+      type: apiKey
+      in: header
+      name: X-Oi-Authorization
+      description: Account-bound API token passed as the X-Oi-Authorization header. Tokens provide access to all subscriptions within the account.
+externalDocs:
+  description: Lighthouse API Documentation
+  url: https://api.mylighthouse.com/
