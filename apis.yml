@@ -22,9 +22,21 @@ description: >-
   Atomize, SHR Group, and Cloudbeds. Revenue model is subscription SaaS
   sold by sales engagement; pricing is not published publicly.
 type: Index
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Provider
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lighthouse-travel.png
 tags:
   - Hospitality
   - Hotels
@@ -46,48 +58,174 @@ created: '2026-05-25'
 modified: '2026-05-25'
 specificationVersion: '0.20'
 apis:
-  - aid: lighthouse-travel:integration-api
-    name: Lighthouse Integration API
-    description: >-
-      The Lighthouse Integration API (v3.1, previously the OTA Insight API)
-      enables subscribed hotels and certified technology partners to create
-      periodic custom data extracts from Lighthouse's hotel competitive
-      intelligence dataset. Endpoints cover Hotels, Markets, Rates (current
-      and historic, by hotel and by room type), Demand predictions, Ranking
-      positions and summaries, Review summaries, Parity comparisons, Parity
-      Insight market scoring, and Market Insight demand and search-volume
-      forecasts (next 351 days). Authentication uses an account-bound API
-      token passed as the X-Oi-Authorization header. Rate limits are 20
-      requests per API per subscription per 24 hours and 120 requests per
-      minute globally. Both JSON (default) and CSV output formats are
-      supported, with optional gzip encoding. Access requires an active
-      Lighthouse subscription; advanced endpoints (Live rateshopping, Raw
-      Rates) require additional entitlements.
-    baseURL: https://api.mylighthouse.com/v3
-    humanURL: https://api.mylighthouse.com/
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    tags:
-      - Hotels
-      - Rates
-      - Demand
-      - Ranking
-      - Reviews
-      - Parity
-      - Market Insight
-      - Competitive Intelligence
-    properties:
-      - type: Documentation
-        url: https://api.mylighthouse.com/
-      - type: OpenAPI
-        url: openapi/lighthouse-travel-integration-api-openapi.yml
-      - type: DeveloperAnnouncement
-        url: https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
-      - type: Partnerships
-        url: https://www.mylighthouse.com/company/partnerships
-      - type: Authentication
-        url: https://api.mylighthouse.com/
-      - type: RateLimits
-        url: https://api.mylighthouse.com/
+- aid: lighthouse-travel:lighthouse-travel-demand-api
+  name: Lighthouse Demand API
+  description: Market demand predictions per arrival date.
+  humanURL: https://api.mylighthouse.com/
+  baseURL: https://api.mylighthouse.com/v3
+  tags:
+  - Demand
+  properties:
+  - type: OpenAPI
+    url: openapi/lighthouse-travel-demand-api-openapi.yml
+  - type: Documentation
+    url: https://api.mylighthouse.com/
+  - type: DeveloperAnnouncement
+    url: >-
+      https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+  - type: Partnerships
+    url: https://www.mylighthouse.com/company/partnerships
+  - type: Authentication
+    url: https://api.mylighthouse.com/
+  - type: RateLimits
+    url: https://api.mylighthouse.com/
+- aid: lighthouse-travel:lighthouse-travel-hotels-api
+  name: Lighthouse Hotels API
+  description: List hotels, competitors, compsets, and subscribed features.
+  humanURL: https://api.mylighthouse.com/
+  baseURL: https://api.mylighthouse.com/v3
+  tags:
+  - Hotels
+  properties:
+  - type: OpenAPI
+    url: openapi/lighthouse-travel-hotels-api-openapi.yml
+  - type: Documentation
+    url: https://api.mylighthouse.com/
+  - type: DeveloperAnnouncement
+    url: >-
+      https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+  - type: Partnerships
+    url: https://www.mylighthouse.com/company/partnerships
+  - type: Authentication
+    url: https://api.mylighthouse.com/
+  - type: RateLimits
+    url: https://api.mylighthouse.com/
+- aid: lighthouse-travel:lighthouse-travel-market-insight-api
+  name: Lighthouse Market Insight API
+  description: Forward-looking demand and search-volume insights.
+  humanURL: https://api.mylighthouse.com/
+  baseURL: https://api.mylighthouse.com/v3
+  tags:
+  - Market Insight
+  properties:
+  - type: OpenAPI
+    url: openapi/lighthouse-travel-market-insight-api-openapi.yml
+  - type: Documentation
+    url: https://api.mylighthouse.com/
+  - type: DeveloperAnnouncement
+    url: >-
+      https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+  - type: Partnerships
+    url: https://www.mylighthouse.com/company/partnerships
+  - type: Authentication
+    url: https://api.mylighthouse.com/
+  - type: RateLimits
+    url: https://api.mylighthouse.com/
+- aid: lighthouse-travel:lighthouse-travel-markets-api
+  name: Lighthouse Markets API
+  description: List markets and linked subscriptions.
+  humanURL: https://api.mylighthouse.com/
+  baseURL: https://api.mylighthouse.com/v3
+  tags:
+  - Markets
+  properties:
+  - type: OpenAPI
+    url: openapi/lighthouse-travel-markets-api-openapi.yml
+  - type: Documentation
+    url: https://api.mylighthouse.com/
+  - type: DeveloperAnnouncement
+    url: >-
+      https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+  - type: Partnerships
+    url: https://www.mylighthouse.com/company/partnerships
+  - type: Authentication
+    url: https://api.mylighthouse.com/
+  - type: RateLimits
+    url: https://api.mylighthouse.com/
+- aid: lighthouse-travel:lighthouse-travel-parity-api
+  name: Lighthouse Parity API
+  description: Rate parity comparisons across OTAs.
+  humanURL: https://api.mylighthouse.com/
+  baseURL: https://api.mylighthouse.com/v3
+  tags:
+  - Parity
+  properties:
+  - type: OpenAPI
+    url: openapi/lighthouse-travel-parity-api-openapi.yml
+  - type: Documentation
+    url: https://api.mylighthouse.com/
+  - type: DeveloperAnnouncement
+    url: >-
+      https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+  - type: Partnerships
+    url: https://www.mylighthouse.com/company/partnerships
+  - type: Authentication
+    url: https://api.mylighthouse.com/
+  - type: RateLimits
+    url: https://api.mylighthouse.com/
+- aid: lighthouse-travel:lighthouse-travel-ranking-api
+  name: Lighthouse Ranking API
+  description: Hotel ranking positions across OTAs and ranking summaries.
+  humanURL: https://api.mylighthouse.com/
+  baseURL: https://api.mylighthouse.com/v3
+  tags:
+  - Ranking
+  properties:
+  - type: OpenAPI
+    url: openapi/lighthouse-travel-ranking-api-openapi.yml
+  - type: Documentation
+    url: https://api.mylighthouse.com/
+  - type: DeveloperAnnouncement
+    url: >-
+      https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+  - type: Partnerships
+    url: https://www.mylighthouse.com/company/partnerships
+  - type: Authentication
+    url: https://api.mylighthouse.com/
+  - type: RateLimits
+    url: https://api.mylighthouse.com/
+- aid: lighthouse-travel:lighthouse-travel-rates-api
+  name: Lighthouse Rates API
+  description: Current and historic lowest rates, rates per room type, and raw rates across OTAs.
+  humanURL: https://api.mylighthouse.com/
+  baseURL: https://api.mylighthouse.com/v3
+  tags:
+  - Rates
+  properties:
+  - type: OpenAPI
+    url: openapi/lighthouse-travel-rates-api-openapi.yml
+  - type: Documentation
+    url: https://api.mylighthouse.com/
+  - type: DeveloperAnnouncement
+    url: >-
+      https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+  - type: Partnerships
+    url: https://www.mylighthouse.com/company/partnerships
+  - type: Authentication
+    url: https://api.mylighthouse.com/
+  - type: RateLimits
+    url: https://api.mylighthouse.com/
+- aid: lighthouse-travel:lighthouse-travel-reviews-api
+  name: Lighthouse Reviews API
+  description: Aggregated review scores across OTAs.
+  humanURL: https://api.mylighthouse.com/
+  baseURL: https://api.mylighthouse.com/v3
+  tags:
+  - Reviews
+  properties:
+  - type: OpenAPI
+    url: openapi/lighthouse-travel-reviews-api-openapi.yml
+  - type: Documentation
+    url: https://api.mylighthouse.com/
+  - type: DeveloperAnnouncement
+    url: >-
+      https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api
+  - type: Partnerships
+    url: https://www.mylighthouse.com/company/partnerships
+  - type: Authentication
+    url: https://api.mylighthouse.com/
+  - type: RateLimits
+    url: https://api.mylighthouse.com/
 common:
   - type: AgenticAccess
     url: agentic-access/lighthouse-travel-agentic-access.yml
