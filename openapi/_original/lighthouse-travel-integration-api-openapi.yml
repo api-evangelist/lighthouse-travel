@@ -1,0 +1,183 @@
+openapi: 3.1.0
+info:
+  title: Lighthouse Integration API
+  description: >-
+    The Lighthouse Integration API (formerly the OTA Insight API) lets
+    subscribed hotel and hospitality customers create periodic custom data
+    extracts from Lighthouse's hotel competitive intelligence, market demand,
+    pricing, and parity datasets. The API exposes read-only endpoints across
+    Hotels, Markets, Rates, Demand, Ranking, Reviews, Parity, and Market
+    Insight. It is part of the Lighthouse Developer Solutions Suite, which
+    also includes integration patterns for Business Intelligence, Benchmark
+    Insight, Pricing Manager, and Channel Manager.
+  version: '3.1'
+  contact:
+    name: Lighthouse Developer Support
+    url: https://www.mylighthouse.com/contact-sales
+  termsOfService: https://www.mylighthouse.com/legal/terms-conditions
+externalDocs:
+  description: Lighthouse API Documentation
+  url: https://api.mylighthouse.com/
+servers:
+  - url: https://api.mylighthouse.com/v3
+    description: Production
+tags:
+  - name: Hotels
+    description: List hotels, competitors, compsets, and subscribed features.
+  - name: Markets
+    description: List markets and linked subscriptions.
+  - name: Rates
+    description: Current and historic lowest rates, rates per room type, and raw rates across OTAs.
+  - name: Demand
+    description: Market demand predictions per arrival date.
+  - name: Ranking
+    description: Hotel ranking positions across OTAs and ranking summaries.
+  - name: Reviews
+    description: Aggregated review scores across OTAs.
+  - name: Parity
+    description: Rate parity comparisons across OTAs.
+  - name: Market Insight
+    description: Forward-looking demand and search-volume insights.
+security:
+  - LighthouseApiToken: []
+paths:
+  /hotels:
+    get:
+      tags: [Hotels]
+      summary: List Hotels
+      description: List hotels, their competitors, compsets, and subscribed features for the authenticated account.
+      responses:
+        '200': { description: OK }
+        '401': { description: Unauthorized }
+        '429': { description: Rate-limited }
+  /markets:
+    get:
+      tags: [Markets]
+      summary: List Markets
+      description: List markets and the subscriptions linked to them.
+      responses:
+        '200': { description: OK }
+        '401': { description: Unauthorized }
+        '429': { description: Rate-limited }
+  /rates:
+    get:
+      tags: [Rates]
+      summary: Get Lowest Rates
+      description: Lowest rates for a hotel and its compset on a given OTA.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+        - { in: query, name: ota, schema: { type: string, default: bookingdotcom } }
+        - { in: query, name: los, schema: { type: integer, default: 1 } }
+        - { in: query, name: format, schema: { type: string, enum: [json, csv], default: json } }
+      responses:
+        '200': { description: OK }
+  /roomtyperates:
+    get:
+      tags: [Rates]
+      summary: Get Lowest Rates Per Room Type
+      description: Lowest rates broken down by room type for a hotel and compset.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+  /historic/rates:
+    get:
+      tags: [Rates]
+      summary: Get Historic Lowest Rates
+      description: Historical lowest rates as captured on a specific extract date.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+        - { in: query, name: extractDate, required: true, schema: { type: string, format: date } }
+      responses:
+        '200': { description: OK }
+  /historic/roomtyperates:
+    get:
+      tags: [Rates]
+      summary: Get Historic Lowest Rates Per Room Type
+      description: Historical room-type lowest rates as captured on a specific extract date.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+        - { in: query, name: extractDate, required: true, schema: { type: string, format: date } }
+      responses:
+        '200': { description: OK }
+  /demand:
+    get:
+      tags: [Demand]
+      summary: Get Market Demand Predictions
+      description: Market demand predictions per arrival date for the linked subscription.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+  /ranking:
+    get:
+      tags: [Ranking]
+      summary: Get Hotel Ranking Positions
+      description: Hotel ranking positions by OTA across the compset.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+  /rankingsummaries:
+    get:
+      tags: [Ranking]
+      summary: Get Ranking Summaries
+      description: Average ranking positions over the past 12 months and 12 weeks per OTA.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+        - { in: query, name: ota, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+  /reviews:
+    get:
+      tags: [Reviews]
+      summary: Get Review Score Summaries
+      description: Aggregated review scores over the past 12 months and 12 weeks per OTA.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+        - { in: query, name: ota, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+  /parities:
+    get:
+      tags: [Parity]
+      summary: Get Rate Parity Comparisons
+      description: Rate parity comparisons across OTAs for the subscribed hotel.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+  /parityinsight:
+    get:
+      tags: [Parity]
+      summary: Get Parity Insight Scores
+      description: Parity scores by aggregation and channel for a given market.
+      parameters:
+        - { in: query, name: market_id, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+  /marketinsight:
+    get:
+      tags: [Market Insight]
+      summary: Get Market Insight Demand
+      description: Demand summaries for the next 351 days for the subscribed market.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+  /marketinsight/searches:
+    get:
+      tags: [Market Insight]
+      summary: Get Market Insight Searches
+      description: Search volume data for the next 351 days for the subscribed market.
+      parameters:
+        - { in: query, name: subscriptionId, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+components:
+  securitySchemes:
+    LighthouseApiToken:
+      type: apiKey
+      in: header
+      name: X-Oi-Authorization
+      description: Account-bound API token passed as the X-Oi-Authorization header. Tokens provide access to all subscriptions within the account.

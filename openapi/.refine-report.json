@@ -1,0 +1,28 @@
+{
+  "provider": "lighthouse-travel",
+  "sources": [
+    "lighthouse-travel-demand-api-openapi.yml",
+    "lighthouse-travel-hotels-api-openapi.yml",
+    "lighthouse-travel-market-insight-api-openapi.yml",
+    "lighthouse-travel-markets-api-openapi.yml",
+    "lighthouse-travel-parity-api-openapi.yml",
+    "lighthouse-travel-ranking-api-openapi.yml",
+    "lighthouse-travel-rates-api-openapi.yml",
+    "lighthouse-travel-reviews-api-openapi.yml"
+  ],
+  "outputs": [
+    "lighthouse-travel-demand-api-openapi.yml",
+    "lighthouse-travel-hotels-api-openapi.yml",
+    "lighthouse-travel-market-insight-api-openapi.yml",
+    "lighthouse-travel-markets-api-openapi.yml",
+    "lighthouse-travel-parity-api-openapi.yml",
+    "lighthouse-travel-ranking-api-openapi.yml",
+    "lighthouse-travel-rates-api-openapi.yml",
+    "lighthouse-travel-reviews-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
