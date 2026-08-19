@@ -1,0 +1,211 @@
+{
+  "item": [
+    {
+      "id": "a0039a8d-6ded-4f49-b465-c3a1c85befd7",
+      "name": "Market Insight",
+      "description": {
+        "content": "Forward-looking demand and search-volume insights.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bfa4c6be-6a47-4d98-9eba-4b9b79fdd84a",
+          "name": "Get Market Insight Demand",
+          "request": {
+            "name": "Get Market Insight Demand",
+            "description": {
+              "content": "Demand summaries for the next 351 days for the subscribed market.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "marketinsight"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23166a6a-1c15-45c6-9bfd-0b005c221793",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "marketinsight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ff526172-08ef-49a7-be7e-8546f9154b62",
+          "name": "Get Market Insight Searches",
+          "request": {
+            "name": "Get Market Insight Searches",
+            "description": {
+              "content": "Search volume data for the next 351 days for the subscribed market.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "marketinsight",
+                "searches"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5633cd00-805a-4ccc-918b-7be56b7ba790",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "marketinsight",
+                    "searches"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.mylighthouse.com/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Oi-Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "eaf0210e-7093-4fb0-b8f1-dac2917ec5d5",
+    "name": "Lighthouse Integration Demand Market Insight API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lighthouse Integration API (formerly the OTA Insight API) lets subscribed hotel and hospitality customers create periodic custom data extracts from Lighthouse's hotel competitive intelligence, market demand, pricing, and parity datasets. The API exposes read-only endpoints across Hotels, Markets, Rates, Demand, Ranking, Reviews, Parity, and Market Insight. It is part of the Lighthouse Developer Solutions Suite, which also includes integration patterns for Business Intelligence, Benchmark Insight, Pricing Manager, and Channel Manager.\n\nContact Support:\n Name: Lighthouse Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

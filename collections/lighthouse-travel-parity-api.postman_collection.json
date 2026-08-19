@@ -1,0 +1,209 @@
+{
+  "item": [
+    {
+      "id": "ed58bd83-435d-4898-a8a9-3c38c67eb91c",
+      "name": "Parity",
+      "description": {
+        "content": "Rate parity comparisons across OTAs.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "62cdf8f3-9beb-4e4d-b354-66dcb4a0790d",
+          "name": "Get Rate Parity Comparisons",
+          "request": {
+            "name": "Get Rate Parity Comparisons",
+            "description": {
+              "content": "Rate parity comparisons across OTAs for the subscribed hotel.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "parities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "57b02d6a-02c4-44fb-935b-05fd98c81146",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "parities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fba09e00-3687-430a-af8a-dd93d69f7ad4",
+          "name": "Get Parity Insight Scores",
+          "request": {
+            "name": "Get Parity Insight Scores",
+            "description": {
+              "content": "Parity scores by aggregation and channel for a given market.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "parityinsight"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "market_id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a004e923-fe70-4662-a04f-c5ff2af1fcdb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "parityinsight"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "market_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.mylighthouse.com/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Oi-Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e5cee389-8391-4b37-be92-b3ae4226abd4",
+    "name": "Lighthouse Integration Demand Parity API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lighthouse Integration API (formerly the OTA Insight API) lets subscribed hotel and hospitality customers create periodic custom data extracts from Lighthouse's hotel competitive intelligence, market demand, pricing, and parity datasets. The API exposes read-only endpoints across Hotels, Markets, Rates, Demand, Ranking, Reviews, Parity, and Market Insight. It is part of the Lighthouse Developer Solutions Suite, which also includes integration patterns for Business Intelligence, Benchmark Insight, Pricing Manager, and Channel Manager.\n\nContact Support:\n Name: Lighthouse Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lighthouse Integration Demand Ranking API",
+    "version": "3.1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Oi-Authorization",
+      "value": "{{X-Oi-Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ranking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Hotel Ranking Positions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/ranking",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Hotel ranking positions by OTA across the compset."
+        },
+        {
+          "info": {
+            "name": "Get Ranking Summaries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/rankingsummaries",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "ota",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Average ranking positions over the past 12 months and 12 weeks per OTA."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

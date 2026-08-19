@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lighthouse Integration Demand Market Insight API",
+    "version": "3.1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Oi-Authorization",
+      "value": "{{X-Oi-Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Market Insight",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Market Insight Demand",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/marketinsight",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Demand summaries for the next 351 days for the subscribed market."
+        },
+        {
+          "info": {
+            "name": "Get Market Insight Searches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/marketinsight/searches",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search volume data for the next 351 days for the subscribed market."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

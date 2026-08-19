@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lighthouse Integration Demand Hotels API",
+    "version": "3.1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Oi-Authorization",
+      "value": "{{X-Oi-Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Hotels",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Hotels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/hotels"
+          },
+          "docs": "List hotels, their competitors, compsets, and subscribed features for the authenticated account."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

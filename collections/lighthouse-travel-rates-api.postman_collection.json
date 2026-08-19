@@ -1,0 +1,420 @@
+{
+  "item": [
+    {
+      "id": "125b3fbb-b340-430b-b84a-105328542b60",
+      "name": "Rates",
+      "description": {
+        "content": "Current and historic lowest rates, rates per room type, and raw rates across OTAs.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "188496c1-0076-411b-8f45-70d9beb3bf91",
+          "name": "Get Lowest Rates",
+          "request": {
+            "name": "Get Lowest Rates",
+            "description": {
+              "content": "Lowest rates for a hotel and its compset on a given OTA.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "rates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "ota",
+                  "value": "bookingdotcom"
+                },
+                {
+                  "disabled": false,
+                  "key": "los",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bf7e480f-b31f-4fbd-8d19-9b15b91c04dd",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ota",
+                      "value": "bookingdotcom"
+                    },
+                    {
+                      "key": "los",
+                      "value": "1"
+                    },
+                    {
+                      "key": "format",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c95d05bd-4e4d-4996-a5f3-2a6d6a52fc4a",
+          "name": "Get Lowest Rates Per Room Type",
+          "request": {
+            "name": "Get Lowest Rates Per Room Type",
+            "description": {
+              "content": "Lowest rates broken down by room type for a hotel and compset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "roomtyperates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9fd29090-37a9-41c5-ba62-67344fb8846c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "roomtyperates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "288bfbed-512a-4938-ba15-00523b14cc30",
+          "name": "Get Historic Lowest Rates",
+          "request": {
+            "name": "Get Historic Lowest Rates",
+            "description": {
+              "content": "Historical lowest rates as captured on a specific extract date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "historic",
+                "rates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "extractDate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ae789720-531c-48e3-a0b5-22f35a562e83",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "historic",
+                    "rates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "extractDate",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fae32a81-48cf-40cf-a75d-fb907952d39d",
+          "name": "Get Historic Lowest Rates Per Room Type",
+          "request": {
+            "name": "Get Historic Lowest Rates Per Room Type",
+            "description": {
+              "content": "Historical room-type lowest rates as captured on a specific extract date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "historic",
+                "roomtyperates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "subscriptionId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "extractDate",
+                  "value": "<date>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3af5213b-e04b-4b52-8439-cac393c1ad63",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "historic",
+                    "roomtyperates"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "subscriptionId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "extractDate",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Oi-Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.mylighthouse.com/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Oi-Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b507ff5f-f833-4449-9f97-5b14260cae82",
+    "name": "Lighthouse Integration Demand Rates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lighthouse Integration API (formerly the OTA Insight API) lets subscribed hotel and hospitality customers create periodic custom data extracts from Lighthouse's hotel competitive intelligence, market demand, pricing, and parity datasets. The API exposes read-only endpoints across Hotels, Markets, Rates, Demand, Ranking, Reviews, Parity, and Market Insight. It is part of the Lighthouse Developer Solutions Suite, which also includes integration patterns for Business Intelligence, Benchmark Insight, Pricing Manager, and Channel Manager.\n\nContact Support:\n Name: Lighthouse Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lighthouse Integration Demand API",
+    "version": "3.1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Oi-Authorization",
+      "value": "{{X-Oi-Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Demand",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Market Demand Predictions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/demand",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Market demand predictions per arrival date for the linked subscription."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

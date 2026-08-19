@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lighthouse Integration Demand Parity API",
+    "version": "3.1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Oi-Authorization",
+      "value": "{{X-Oi-Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Parity",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Rate Parity Comparisons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/parities",
+            "params": [
+              {
+                "name": "subscriptionId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Rate parity comparisons across OTAs for the subscribed hotel."
+        },
+        {
+          "info": {
+            "name": "Get Parity Insight Scores",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.mylighthouse.com/v3/parityinsight",
+            "params": [
+              {
+                "name": "market_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Parity scores by aggregation and channel for a given market."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
