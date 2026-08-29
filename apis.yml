@@ -22,6 +22,18 @@ description: >-
   Atomize, SHR Group, and Cloudbeds. Revenue model is subscription SaaS
   sold by sales engagement; pricing is not published publicly.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
