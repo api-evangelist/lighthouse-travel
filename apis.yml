@@ -255,6 +255,9 @@ apis:
   - type: RateLimits
     url: https://api.mylighthouse.com/
 common:
+  - type: CapabilityMap
+    url: capabilities/lighthouse-travel-capability-edges.yml
+    name: Lighthouse Business Capability Map
   - type: AgenticAccess
     url: agentic-access/lighthouse-travel-agentic-access.yml
   - type: VulnerabilityDisclosure

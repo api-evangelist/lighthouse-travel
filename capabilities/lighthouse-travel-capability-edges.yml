@@ -1,0 +1,44 @@
+slug: lighthouse-travel
+provider: Lighthouse
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Travel & Hospitality
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Parity
+  spec_file: lighthouse-travel-parity-api-openapi.yml
+  capability_id: BC-4010.60
+  capability_id_l1: BC-4010
+  capability_name: Rate & Availability Parity Management
+  confidence: 0.9
+  evidence: GET /parities — "Get Rate Parity Comparisons"; GET /parityinsight — "Get Parity Insight Scores"
+  reason: The operations deliver rate-parity comparison and parity scoring data across channels, which
+    is exactly Rate & Availability Parity Management (monitoring parity across direct and indirect channels).
+- tag: Rates
+  spec_file: lighthouse-travel-rates-api-openapi.yml
+  capability_id: BC-4030.40
+  capability_id_l1: BC-4030
+  capability_name: Competitive Rate Intelligence
+  confidence: 0.85
+  evidence: GET /rates — "Get Lowest Rates"; GET /historic/roomtyperates — "Get Historic Lowest Rates
+    Per Room Type"
+  reason: Retrieval of current and historic lowest rates by room type across the competitive set is classic
+    rate shopping / competitive rate intelligence feeding revenue decisions.
+- tag: Demand
+  spec_file: lighthouse-travel-demand-api-openapi.yml
+  capability_id: BC-4030.10
+  capability_id_l1: BC-4030
+  capability_name: Travel Demand Forecasting
+  confidence: 0.8
+  evidence: GET /demand "Get Market Demand Predictions"; "Lighthouse's hotel competitive intelligence,
+    market demand, pricing, and parity datasets"
+  reason: Delivers forward-looking market demand predictions used for hotel revenue decisions, which is
+    travel demand forecasting input.
