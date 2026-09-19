@@ -198,6 +198,8 @@ apis:
   humanURL: https://api.mylighthouse.com/
   baseURL: https://api.mylighthouse.com/v3
   tags:
+  - Rankings
+  tags_raw:
   - Ranking
   properties:
   - type: OpenAPI
