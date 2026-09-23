@@ -1,7 +1,7 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Lighthouse Integration Demand Rates API
-  description: The Lighthouse Integration API (formerly the OTA Insight API) lets subscribed hotel and hospitality customers create periodic custom data extracts from Lighthouse's hotel competitive intelligence, market demand, pricing, and parity datasets. The API exposes read-only endpoints across Hotels, Markets, Rates, Demand, Ranking, Reviews, Parity, and Market Insight. It is part of the Lighthouse Developer Solutions Suite, which also includes integration patterns for Business Intelligence, Benchmark Insight, Pricing Manager, and Channel Manager.
+  title: Lighthouse Integration Rates API
+  description: The Lighthouse Integration API (formerly the OTA Insight API) lets subscribed hotel and hospitality customers create periodic custom data extracts from Lighthouse's hotel competitive intelligence, market demand, pricing, and parity datasets.
   version: '3.1'
   contact:
     name: Lighthouse Developer Support
@@ -49,6 +49,8 @@ paths:
       responses:
         '200':
           description: OK
+      operationId: getRates
+      x-operation-id-source: derived
   /roomtyperates:
     get:
       tags:
@@ -64,6 +66,8 @@ paths:
       responses:
         '200':
           description: OK
+      operationId: getRoomtyperates
+      x-operation-id-source: derived
   /historic/rates:
     get:
       tags:
@@ -85,6 +89,8 @@ paths:
       responses:
         '200':
           description: OK
+      operationId: getHistoricRates
+      x-operation-id-source: derived
   /historic/roomtyperates:
     get:
       tags:
@@ -106,6 +112,8 @@ paths:
       responses:
         '200':
           description: OK
+      operationId: getHistoricRoomtyperates
+      x-operation-id-source: derived
 components:
   securitySchemes:
     LighthouseApiToken:
