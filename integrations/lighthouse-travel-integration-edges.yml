@@ -1,0 +1,44 @@
+generated: '2026-10-14'
+method: searched
+checked:
+- apaleo/integrations/apaleo-integration-edges.yml
+- hostaway/integrations/hostaway-integration-edges.yml
+source:
+- hostaway/integrations/hostaway-integration-edges.yml
+edges:
+- partner_name: apaleo (own)
+  partner: apaleo
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://store.apaleo.com/apps/benchmark-insight-lighthouse
+  mirror_of: apaleo/integrations/apaleo-integration-edges.yml
+  apps:
+  - Benchmark Insight - Lighthouse
+  - Business Intelligence - Lighthouse
+  - 'Channel Management (Lighthouse) '
+  - Pricing Manager (Lighthouse)
+  listing_count: 4
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Revenue management systems
+- partner_name: Hostaway (own)
+  partner: hostaway
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.hostaway.com/marketplace/lighthouse
+  mirror_of: hostaway/integrations/hostaway-integration-edges.yml
+  apps:
+  - Lighthouse
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
