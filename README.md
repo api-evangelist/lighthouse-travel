@@ -1,4 +1,4 @@
-# Lighthouse (lighthouse-travel)
+# Lighthouse
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,102 +66,110 @@
 
 Lighthouse (formerly OTA Insight) is the commercial platform for the travel and hospitality industry, transforming data complexity into revenue growth for 80,000+ hotels across 185+ countries. Headquartered in London with offices across Europe, the Americas, and Asia-Pacific, Lighthouse combines market intelligence, business intelligence, and revenue management into a single SaaS suite. Core products include Rate Insight and Market Insight for competitive pricing and forward demand, Pricing Manager for automated revenue optimization, Benchmark Insight for Smart Compset competitive analysis, Business Intelligence for portfolio reporting, Parity Insight for distribution parity, Channel Manager for independent hotels, and newer AI products like KITT (AI receptionist) and Connect AI (ChatGPT direct-booking app). The platform processes 1.7 billion hotel rates per day across 300,000+ profiled competitor hotels. Lighthouse exposes a public, subscription-gated Integration API (api.mylighthouse.com, v3.1) for hotel customers and certified technology partners — covering Hotels, Markets, Rates, Demand, Ranking, Reviews, Parity, and Market Insight — and runs a partner program with 20+ named integrations including Mews, Infor, Duetto, Cendyn, Ideas, Atomize, SHR Group, and Cloudbeds. Revenue model is subscription SaaS sold by sales engagement; pricing is not published publicly.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/lighthouse-travel/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/lighthouse-travel/refs/heads/main/apis.yml)
+**Areas:** Hospitality · Hotels · Travel · Revenue Management · Market Intelligence · Business Intelligence · Pricing · Rate Shopping · Competitive Intelligence · Distribution · Parity · Channel Manager
 
-## Scope
+## Lighthouse on APIs.io
 
-- **Type:** Index
-- **Position:** Provider
-- **Access:** 3rd-Party
+Everything profiled for Lighthouse is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lighthouse-travel/](https://apis.io/providers/lighthouse-travel/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Hospitality
-- Hotels
-- Travel
-- Revenue Management
-- Market Intelligence
-- Business Intelligence
-- Pricing
-- Rate Shopping
-- Competitive Intelligence
-- Distribution
-- Parity
-- Channel Manager
-- Demand Forecasting
-- SaaS
-- AI
+- [Lighthouse Demand API](https://apis.io/apis/lighthouse-travel/lighthouse-travel-demand-api/) — Market demand predictions per arrival date.
+- [Lighthouse Hotels API](https://apis.io/apis/lighthouse-travel/lighthouse-travel-hotels-api/) — List hotels, competitors, compsets, and subscribed features.
+- [Lighthouse Market Insight API](https://apis.io/apis/lighthouse-travel/lighthouse-travel-market-insight-api/) — Forward-looking demand and search-volume insights.
+- [Lighthouse Markets API](https://apis.io/apis/lighthouse-travel/lighthouse-travel-markets-api/) — List markets and linked subscriptions.
+- [Lighthouse Parity API](https://apis.io/apis/lighthouse-travel/lighthouse-travel-parity-api/) — Rate parity comparisons across OTAs.
+- [Lighthouse Ranking API](https://apis.io/apis/lighthouse-travel/lighthouse-travel-ranking-api/) — Hotel ranking positions across OTAs and ranking summaries.
+- [Lighthouse Rates API](https://apis.io/apis/lighthouse-travel/lighthouse-travel-rates-api/) — Current and historic lowest rates, rates per room type, and raw rates across OTAs.
+- [Lighthouse Reviews API](https://apis.io/apis/lighthouse-travel/lighthouse-travel-reviews-api/) — Aggregated review scores across OTAs.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Lighthouse Integration API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Lighthouse Integration API (v3.1, previously the OTA Insight API) enables subscribed hotels and certified technology partners to create periodic custom data extracts from Lighthouse's hotel competitive intelligence dataset. Endpoints cover Hotels, Markets, Rates (current and historic, by hotel and by room type), Demand predictions, Ranking positions and summaries, Review summaries, Parity comparisons, Parity Insight market scoring, and Market Insight demand and search-volume forecasts (next 351 days). Authentication uses an account-bound API token passed as the X-Oi-Authorization header. Rate limits are 20 requests per API per subscription per 24 hours and 120 requests per minute globally. Both JSON (default) and CSV output formats are supported, with optional gzip encoding. Access requires an active Lighthouse subscription; advanced endpoints (Live rateshopping, Raw Rates) require additional entitlements.
+- [Lighthouse Travel Agentic Access](https://apis.io/agentic-access/lighthouse-travel/lighthouse-travel-agentic-access/)
 
-- **Human URL:** [https://api.mylighthouse.com/](https://api.mylighthouse.com/)
-- **Base URL:** `https://api.mylighthouse.com/v3`
+#### Collections (8)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Hotels
-- Rates
-- Demand
-- Ranking
-- Reviews
-- Parity
-- Market Insight
-- Competitive Intelligence
+- [Lighthouse Integration Demand API](https://apis.io/collections/lighthouse-travel/open-lighthouse-travel-demand-api/)
+- [Lighthouse Integration Demand Hotels API](https://apis.io/collections/lighthouse-travel/open-lighthouse-travel-hotels-api/)
+- [Lighthouse Integration API](https://apis.io/collections/lighthouse-travel/open-lighthouse-travel-integration-api/)
+- [Lighthouse Integration Demand Market Insight API](https://apis.io/collections/lighthouse-travel/open-lighthouse-travel-market-insight-api/)
+- [Lighthouse Integration Demand Markets API](https://apis.io/collections/lighthouse-travel/open-lighthouse-travel-markets-api/)
+- [Lighthouse Integration Demand Parity API](https://apis.io/collections/lighthouse-travel/open-lighthouse-travel-parity-api/)
+- [Lighthouse Integration Demand Ranking API](https://apis.io/collections/lighthouse-travel/open-lighthouse-travel-ranking-api/)
+- [Lighthouse Integration Demand Rates API](https://apis.io/collections/lighthouse-travel/open-lighthouse-travel-rates-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://api.mylighthouse.com/)
-- [OpenAPI](openapi/lighthouse-travel-integration-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/lighthouse-travel-integration-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/lighthouse-travel-integration-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Developer Announcement](https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api)
-- [Partnerships](https://www.mylighthouse.com/company/partnerships)
-- [Authentication](https://api.mylighthouse.com/)
-- [Rate Limits](https://api.mylighthouse.com/)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Lighthouse Travel Authentication](https://apis.io/security/lighthouse-travel/lighthouse-travel-authentication/)
+- [Lighthouse Travel Domain Security](https://apis.io/security/lighthouse-travel/lighthouse-travel-domain-security/)
+- [Lighthouse Travel Vulnerability Disclosure](https://apis.io/security/lighthouse-travel/lighthouse-travel-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.mylighthouse.com)
-- [About](https://www.mylighthouse.com/company/about)
-- [Products](https://www.mylighthouse.com/products)
-- [Pricing Manager](https://www.mylighthouse.com/products/pricing-manager)
-- [Rate Insight](https://www.mylighthouse.com/products/rate-insight)
-- [Market Insight](https://www.mylighthouse.com/products/market-insight)
-- [Benchmark Insight](https://www.mylighthouse.com/products/benchmark-insight)
-- [Business Intelligence](https://www.mylighthouse.com/products/business-intelligence)
-- [Parity Insight](https://www.mylighthouse.com/products/parity-insight)
-- [Channel Manager](https://www.mylighthouse.com/products/channel-manager)
-- [Data Solutions](https://www.mylighthouse.com/data-services/hotel-data-solutions)
-- [Developer Solutions](https://www.mylighthouse.com/resources/blog/developer-solutions-suite-new-integration-api)
-- [A P I](https://api.mylighthouse.com/)
-- [Marketplace](https://marketplace.mylighthouse.com/)
-- [Partnerships](https://www.mylighthouse.com/company/partnerships)
-- [Customers](https://www.mylighthouse.com/customers)
-- [Resources](https://www.mylighthouse.com/resources)
 - [Blog](https://www.mylighthouse.com/resources/blog)
-- [Insights](https://www.mylighthouse.com/resources/insights)
-- [Events](https://www.mylighthouse.com/resources/events)
-- [Customer Care](https://www.mylighthouse.com/company/customer-care)
-- [Trust](https://trust.mylighthouse.com)
-- [Careers](https://www.mylighthouse.com/company/careers)
-- [Contact Sales](https://www.mylighthouse.com/contact-sales)
-- [Login](https://app.mylighthouse.com/login)
-- [Git Hub](https://github.com/OTA-Insight)
-- [Dev To](https://dev.to/lighthouse-intelligence)
-- [LinkedIn](https://www.linkedin.com/company/lighthouseintelligence/)
-- [YouTube](https://www.youtube.com/@HotelRevenueManagement)
-- [Facebook](https://www.facebook.com/lighthouse.intel/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 27.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 49.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 14.5 |
+
+**Agent readiness 22.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 20.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lighthouse-travel/](https://apis.io/providers/lighthouse-travel/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lighthouse: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lighthouse-travel/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
